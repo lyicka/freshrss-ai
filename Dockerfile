@@ -2,8 +2,8 @@ FROM freshrss/freshrss:latest
 
 RUN apt-get update && apt-get install -y git && \
     cd /var/www/FreshRSS/extensions && \
-    git clone https://github.com/LiangWei88/xExtension-ArticleSummary.git && \
-    chown -R www-data:www-data xExtension-ArticleSummary && \
+    git clone https://github.com/fengchang/xExtension-FeedDigest.git && \
+    chown -R www-data:www-data xExtension-FeedDigest && \
     apt-get remove -y git && apt-get autoremove -y && rm -rf /var/lib/apt/lists/*
 
 EXPOSE 80
